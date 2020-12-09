@@ -17,6 +17,7 @@
                     </div>
                 </page-wrapper>
             </section>
+            <HeaderClothesMenu />
     </header>
 </template>
 
@@ -26,6 +27,7 @@ import BaseNavBar from '@/components/baseComponents/BaseNavBar.vue'
 import HeaderDelivery from '@/components/HeaderDelivery.vue'
 import PageWrapper from '@/components/PageWrapper.vue'
 import HeaderSubMenu from '@/components/HeaderSubMenu.vue'
+import HeaderClothesMenu from '@/components/HeaderClothesMenu.vue'
 
 export default {
     name: 'Header',
@@ -33,7 +35,8 @@ export default {
         BaseNavBar,
         HeaderDelivery,
         HeaderSubMenu,
-        PageWrapper
+        PageWrapper,
+        HeaderClothesMenu
     },
     data() {
         return {
