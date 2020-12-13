@@ -50,9 +50,6 @@ export default {
         }
 
         .header__delivery_button{
-            width: 30px;
-            height: auto;
-
             fill: black;
             margin-left: auto;
         }

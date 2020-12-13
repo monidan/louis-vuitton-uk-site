@@ -75,6 +75,7 @@ export default {
                 padding: 1.25rem 0; 
                 cursor: pointer;
                 transition: .5s;
+                font-size: .85rem;
 
                 &:hover{
                     box-shadow: inset 0 -1px 0 0 #19110b;

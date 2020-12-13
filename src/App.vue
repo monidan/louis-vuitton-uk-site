@@ -24,6 +24,7 @@ export default {
     padding: 0;
 
     font-family: 'Raleway', sans-serif;
+    letter-spacing: .05rem;
   }
   a{
     text-decoration: none;
