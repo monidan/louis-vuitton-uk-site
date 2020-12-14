@@ -4,6 +4,7 @@
     <NewCollections />
     <ItemsSuggestions />
     <Presents />
+    <Footer country="Украина"/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Header from '@/components/Header.vue'
 import NewCollections from '@/components/NewCollections.vue'
 import ItemsSuggestions from '@/components/ItemsSuggestions.vue'
 import Presents from '@/components/Presents.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
@@ -19,7 +21,8 @@ export default {
     Header,
     NewCollections,
     ItemsSuggestions,
-    Presents
+    Presents,
+    Footer
   }
 }
 </script>

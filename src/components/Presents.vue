@@ -33,8 +33,7 @@ export default {
 
     div {
       height: 100%;
-      padding: 5%;
-      min-height: 30rem;
+      padding: 10% 5%;
       text-align: center;
       text-transform: uppercase;
 
@@ -46,10 +45,11 @@ export default {
 
       img{
         max-width: 100%;
+        margin-bottom: 3rem;
       }
 
       h2{
-        padding: 2.5rem;
+        padding: 0 2.5rem;  
         font-size: 1.45rem;
       }
     }
