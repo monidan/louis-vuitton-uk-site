@@ -3,6 +3,7 @@
     <Header country='Украина'/>
     <NewCollections />
     <ItemsSuggestions />
+    <Presents />
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import Header from '@/components/Header.vue'
 import NewCollections from '@/components/NewCollections.vue'
 import ItemsSuggestions from '@/components/ItemsSuggestions.vue'
+import Presents from '@/components/Presents.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
     NewCollections,
-    ItemsSuggestions
+    ItemsSuggestions,
+    Presents
   }
 }
 </script>
