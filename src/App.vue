@@ -1,17 +1,22 @@
 <template>
   <div id="app">
     <Header country='Украина'/>
+    <NewCollections />
+    <ItemsSuggestions />
   </div>
 </template>
 
 <script>
-// import PageWrapper from './components/PageWrapper.vue'
 import Header from '@/components/Header.vue'
+import NewCollections from '@/components/NewCollections.vue'
+import ItemsSuggestions from '@/components/ItemsSuggestions.vue'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    NewCollections,
+    ItemsSuggestions
   }
 }
 </script>

@@ -20,7 +20,7 @@
                 <div class="lv__magazine">
                     <h2 class="lv__magazine__heading">Журнал</h2>
                     <a href="#" class="lv__magazine__current__fashion">
-                        <img src="https://www.louisvuitton.com/images//content/dam/lv/online/picture/allcountry/magazine/fashion/petite_malle_souple/W_Fa_LG_Petite_Malle_Souple_DI3.jpg?wid=456 " alt="Fashion magazine">
+                        <img src="../assets/W_Fa_LG_Petite_Malle_Souple_DI3.jpg" alt="Fashion magazine">
                         <div class="lv__magazine__text">
                             <h3>Petite Malle Souple</h3>
                             <p>
@@ -36,25 +36,25 @@
                 <ul>
                     <li>
                         <a href="#">
-                            <img src="https://www.louisvuitton.com/images/FJCO20QWE820_PM2_Front%20view?wid=456" alt="">
+                            <img src="../assets/coat__lv.webp" alt="">
                             <p>Укороченное пальто с ремнём</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="https://www.louisvuitton.com/images/HJK02WVFS900_PM2_Front%20view?wid=456" alt="">
+                            <img src="../assets/parka__lv.webp" alt="">
                             <p>Парка LV с вишивкой</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="https://www.louisvuitton.com/images/M45142_PM2_Front%20view?wid=456" alt="">
+                            <img src="../assets/bag__lv.webp" alt="">
                             <p>Рюкзак Dauphine PM</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="https://www.louisvuitton.com/images/N40408_PM2_Front%20view?wid=456" alt="">
+                            <img src="../assets/bananka__lv.webp" alt="">
                             <p>Сумка-мессенджер ALPHA</p>
                         </a>
                     </li>
@@ -93,6 +93,7 @@ export default {
 </script>
 <style lang="scss">
     .lv__clothes_menu{
+        display:none;
         border-bottom: 1px solid #eae8e4;
         position: relative;
 
