@@ -13,7 +13,9 @@
                         <div class="header__search_icon">
                             <font-awesome-icon icon='search'/>
                         </div>
-                        <input type="text" placeholder="Изделие, магазин...">
+                        <input type="text" placeholder="Изделие, магазин..." 
+                                @focus="clothesMenuEl.style.height = '100%'"
+                                @blur="clothesMenuEl.style.height = '0%'">
                     </div>
                 </page-wrapper>
             </section>
@@ -51,6 +53,11 @@ export default {
     },
     props: {
         country: String,
+    },
+    computed: {
+        clothesMenuEl() {
+            return document.querySelector('.lv__clothes_menu');
+        }
     }
 }
 </script>

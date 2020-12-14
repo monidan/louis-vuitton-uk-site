@@ -93,9 +93,10 @@ export default {
 </script>
 <style lang="scss">
     .lv__clothes_menu{
-        display:none;
         border-bottom: 1px solid #eae8e4;
         position: relative;
+        transition: height .5s ease-in-out;
+        height: 0;
 
         .wrapper{
             display: grid;

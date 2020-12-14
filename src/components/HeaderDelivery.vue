@@ -10,7 +10,7 @@
                 </p>
             </div>
             <div class="header__delivery_button">
-                <button>
+                <button @click="closeMenuHandler">
                     <font-awesome-icon icon='times'/>
                 </button>
             </div>
@@ -24,6 +24,12 @@ export default {
     name: 'SmallMenu',
     components: {
         PageWrapper
+    },
+    methods: {
+        closeMenuHandler() {
+            const menuEl = document.querySelector('.header__delivery_menu')
+            menuEl.style.display = 'none';
+        },
     }
 }
 </script>
@@ -52,6 +58,10 @@ export default {
         .header__delivery_button{
             fill: black;
             margin-left: auto;
+
+            button{
+                outline:none;
+            }
         }
     }
 </style>
