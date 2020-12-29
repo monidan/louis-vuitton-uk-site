@@ -13,13 +13,22 @@
                         <div class="header__search_icon">
                             <font-awesome-icon icon='search'/>
                         </div>
-                        <input type="text" placeholder="Изделие, магазин..." 
-                                @focus="clothesMenuEl.style.height = '100%'"
-                                @blur="clothesMenuEl.style.height = '0%'">
+                        <input  type="text" 
+                                placeholder="Изделие, магазин..." 
+                                @focus="showClothesMenu">
                     </div>
                 </page-wrapper>
             </section>
-            <HeaderClothesMenu />
+            <transition 
+                name="dropdown-menu"
+                >
+                <HeaderClothesMenu 
+                    v-show="visibleClothesMenu"
+                    @close-clothes-menu="closeClothesMenu"/>
+            </transition>
+            <transition name="clothes-menu-mask">
+                <div v-if='visibleClothesMenu' class="clothes-menu-mask"></div>
+            </transition>
     </header>
 </template>
 
@@ -49,6 +58,7 @@ export default {
                     {name: "Стиль жизни и путешествий", link: "#"},
                     {name: "Журнал", link: "#"}
                 ],
+            visibleClothesMenu: false,
         }
     },
     props: {
@@ -56,13 +66,40 @@ export default {
     },
     computed: {
         clothesMenuEl() {
-            return document.querySelector('.lv__clothes_menu');
+            return document.querySelector('.lv__clothes_menu')
+        }
+    },
+    methods: {
+        closeClothesMenu() {
+            this.visibleClothesMenu = false
+
+            const {body} = document;
+            body.style.overflow = 'auto'
+            body.style.position = null;
+            body.style.width = null;
+            body.style.top = null
+
+            const html = document.documentElement;
+            html.style.overflow = 'auto';
+        },
+        showClothesMenu() {
+            this.visibleClothesMenu = true;
+
+            const {body} = document;
+            body.style.overflow = 'hidden';
+            body.style.position = 'fixed';
+            body.style.width = '100%';
+            body.style.top = '0px'
+
+            const html = document.documentElement;
+            html.style.overflow = 'hidden';
         }
     }
 }
 </script>
 
 <style lang="scss">
+
     .header__navigation{
         box-shadow: inset 0 -1px 0 0 #eae8e4;
 
@@ -116,5 +153,35 @@ export default {
             height: 20px;
             margin-right: 3rem;
        }
+    }
+
+    // Drop down menu styles for the <transition> 
+
+    .dropdown-menu-enter-active, .dropdown-menu-leave-active{
+        transition: all .5s ease-in-out;
+        max-height: 50%;
+    }
+
+    .dropdown-menu-enter, .dropdown-menu-leave-to{
+        max-height: 0;
+    }
+
+    .clothes-menu-mask-enter-active, .clothes-menu-mask-leave-active{
+        transition: all .5s;
+        opacity: 1;
+    } 
+
+    .clothes-menu-mask-enter, .clothes-menu-mask-leave-to{
+        opacity: 0;
+    }
+
+    // Drop down meny overlay mask styles 
+
+    .clothes-menu-mask{
+        background-color: rgba(0, 0, 0, .8);
+        height: 100%;
+        width: 100%;
+        z-index: 19;
+        position: absolute;
     }
 </style>

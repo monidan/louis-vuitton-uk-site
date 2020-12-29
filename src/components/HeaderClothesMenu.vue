@@ -1,7 +1,7 @@
 <template>
     <div class="lv__clothes_menu">
         <div class="lv__close__button">
-            <button>
+            <button @click="closeMenu">
                 <font-awesome-icon icon='times'/>
             </button>
         </div>
@@ -88,6 +88,11 @@ export default {
                 {name: 'Шарфы и текстиль', link: '#'},
             ],
         }
+    },
+    methods: {
+        closeMenu() {
+            this.$emit('close-clothes-menu')
+        }
     }
 }
 </script>
@@ -95,8 +100,10 @@ export default {
     .lv__clothes_menu{
         border-bottom: 1px solid #eae8e4;
         position: relative;
-        transition: height .5s ease-in-out;
-        height: 0;
+        background-color: white;
+        z-index: 20;
+        position: absolute;
+        overflow: hidden;
 
         .wrapper{
             display: grid;
@@ -104,7 +111,7 @@ export default {
         }
 
         .lv__clothes_group{
-            padding: 3rem;
+            padding: 2.5rem;
             max-width: 100%;
             
             
@@ -236,6 +243,10 @@ export default {
             position: absolute;
             right: 1rem;
             top: 1rem;
+
+            button {
+                padding: .5rem;
+            }
         }
     }
 </style>
