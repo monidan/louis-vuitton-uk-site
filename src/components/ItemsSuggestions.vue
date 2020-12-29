@@ -115,6 +115,13 @@ export default {
         padding: 1rem .5rem;
         color: white;
         background-color: #19110b;
+
+        transition: all .3s ease-in-out;
+
+        &:hover{
+          background-color: rgba(#19110b, .9);
+          border-color: rgba(black, .9);
+        }
       }
     }
 

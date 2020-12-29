@@ -246,6 +246,7 @@ export default {
 
             button {
                 padding: .5rem;
+                outline: none;
             }
         }
     }

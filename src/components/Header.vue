@@ -27,7 +27,9 @@
                     @close-clothes-menu="closeClothesMenu"/>
             </transition>
             <transition name="clothes-menu-mask">
-                <div v-if='visibleClothesMenu' class="clothes-menu-mask"></div>
+                <div v-if='visibleClothesMenu' 
+                     class="clothes-menu-mask"
+                     @click="closeClothesMenu"></div>
             </transition>
     </header>
 </template>

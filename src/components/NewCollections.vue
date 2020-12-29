@@ -75,6 +75,21 @@ export default {
             &:first-child{
               color: white;
               background-color: #19110b;
+              transition: all .3s ease-in-out;
+
+              &:hover{
+                background-color: rgba(#19110b, .9);
+                border-color: rgba(black, .9);
+              }
+            }
+
+            &:last-child{
+              transition: all .3s ease-in-out;
+
+              &:hover{
+                background-color: rgba(grey, .1);
+                border-color: rgba(black, .9);
+              }
             }
 
             &:last-child:active{

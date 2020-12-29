@@ -103,6 +103,11 @@ export default {
         display: flex;
         align-items: center;
         color: white;
+        transition: all .3s ease-in-out;
+
+        &:hover{
+          color: rgba(white, .8)
+        }
 
         img {
           max-height: 20px;
