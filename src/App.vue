@@ -1,27 +1,19 @@
 <template>
   <div id="app">
     <Header country='Украина'/>
-    <NewCollections />
-    <ItemsSuggestions />
-    <Presents />
+    <router-view></router-view>
     <Footer country="Украина"/>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
-import NewCollections from '@/components/NewCollections.vue'
-import ItemsSuggestions from '@/components/ItemsSuggestions.vue'
-import Presents from '@/components/Presents.vue'
 import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    NewCollections,
-    ItemsSuggestions,
-    Presents,
     Footer
   }
 }
@@ -29,6 +21,10 @@ export default {
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
+
+  html{
+    min-height: 100%;
+  }
 
   body{
     margin: 0;
