@@ -124,6 +124,7 @@ export default {
                 align-items: center;
                 li{
                     padding-left: 1rem;
+
                     svg{
                         font-size: .9rem;
                     }

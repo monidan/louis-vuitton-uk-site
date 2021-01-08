@@ -16,7 +16,6 @@
 export default {
     name: 'BaseNavigationBar',
     props: {
-        blockName: String,
         navItems: Array,
     }
 }
