@@ -18,6 +18,18 @@ const routes = [
     title: 'Louis Vuitton Women Collection',
     name: 'WomenClothes',
     component: () => import('../views/WomenItems.vue')
+  },
+  {
+    path: '/posts',
+    title: 'Posts',
+    name: 'Posts',
+    component: () => import('../views/PostPage.vue')
+  },
+  {
+    path: '/posts/new',
+    title: 'New Post',
+    name: 'NewPost',
+    component: () => import('../views/NewPostPage.vue')
   }
 ];
 

@@ -36,17 +36,23 @@
         <p>Скрыть Фильтры</p>
       </div>
     </div>
+    <div class="lv-women-clothes">
+      <BaseClothesList />
+    </div>
   </div>
 </template>
 <script>
   import BaseNavBar from '../components/baseComponents/BaseNavBar'
   import BaseImage from '../components/baseComponents/BaseImage'
+  import BaseClothesList from '../components/baseComponents/BaseClothesList'
+
 
   export default {
     name: 'WomenClothes',
     components: {
       BaseNavBar,
-      BaseImage
+      BaseImage,
+      BaseClothesList
     },
     data() {
       return {

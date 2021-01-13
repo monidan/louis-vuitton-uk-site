@@ -5,7 +5,13 @@
 </template>
 <script>
 export default {
-  name: 'Clothes'
+  name: 'Clothes',
+  props: {
+    clothes : {
+      type: Array,
+      required: true,
+    }
+  }
 }
 </script>
 <style lang="scss">
