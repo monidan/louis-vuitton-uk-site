@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
-    <Header country='Украина'/>
-    <router-view></router-view>
-    <Footer country="Украина"/>
-  </div>
+    <div id="app">
+      <Header country='Украина'/>
+      <router-view></router-view>
+      <Footer country="Украина"/>
+    </div>
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default {
   components: {
     Header,
     Footer
-  }
+  },
 }
 </script>
 
