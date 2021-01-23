@@ -1,5 +1,5 @@
 <template>
-    <header id="header">
+    <header id="header" v-custom-scroll>
         <HeaderDelivery />
             <HeaderSubMenu 
                 :country='country'/>
@@ -79,7 +79,7 @@ export default {
             body.style.overflow = 'auto'
             body.style.position = null;
             body.style.width = null;
-            body.style.top = null
+            // body.style.top = null
 
             const html = document.documentElement;
             html.style.overflow = 'auto';
@@ -89,9 +89,7 @@ export default {
 
             const {body} = document;
             body.style.overflow = 'hidden';
-            body.style.position = 'fixed';
             body.style.width = '100%';
-            body.style.top = '0px'
 
             const html = document.documentElement;
             html.style.overflow = 'hidden';
@@ -101,6 +99,20 @@ export default {
 </script>
 
 <style lang="scss">
+    #header{
+        position: fixed!important;
+        width: 100%;
+        top: 0;
+
+        transition: transform .3s ease-in-out;
+
+        background-color: white;
+    }
+
+    .header_hide{
+        transform: translateY(-100%);
+    }
+
 
     .header__navigation{
         box-shadow: inset 0 -1px 0 0 #eae8e4;
@@ -161,7 +173,7 @@ export default {
 
     .dropdown-menu-enter-active, .dropdown-menu-leave-active{
         transition: all .5s ease-in-out;
-        max-height: 50%;
+        max-height: 50vh;
     }
 
     .dropdown-menu-enter, .dropdown-menu-leave-to{
@@ -181,7 +193,7 @@ export default {
 
     .clothes-menu-mask{
         background-color: rgba(0, 0, 0, .8);
-        height: 100%;
+        height: 100vh;
         width: 100%;
         z-index: 19;
         position: absolute;

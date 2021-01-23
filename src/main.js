@@ -19,14 +19,22 @@ library.add(
   faSearch,
 )
 
-Vue.directive('scroll', {
-  inserted(el, binding) {
-    let f = function(evt) {
-      if(binding.value(evt, el)){
-        window.removeEventListener('scroll', f)
+Vue.directive('custom-scroll', {
+  inserted(el) {
+    let startScrollPosition = 0
+
+    window.addEventListener('scroll', function() {
+      let currentScrollPosition = pageYOffset;
+
+      if(currentScrollPosition > 100){
+        if(currentScrollPosition > startScrollPosition){
+          el.classList.add('header_hide')
+        } else {
+          el.classList.remove('header_hide')
+        }
       }
-    }
-    window.addEventListener('scroll', f);
+      startScrollPosition = currentScrollPosition;
+    })
   }
 })
 

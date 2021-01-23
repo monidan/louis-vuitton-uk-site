@@ -1,7 +1,9 @@
 <template>
     <div id="app">
       <Header country='Украина'/>
-      <router-view></router-view>
+      <router-view
+        id="lv-view"
+      ></router-view>
       <Footer country="Украина"/>
     </div>
 </template>
@@ -45,5 +47,9 @@ export default {
     li{
       list-style-type: none;
     }
+  }
+
+  #lv-view{
+    padding-top: 9rem;
   }
 </style>

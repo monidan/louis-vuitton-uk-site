@@ -99,7 +99,9 @@ export default {
 <style lang="scss">
     .lv__clothes_menu{
         border-bottom: 1px solid #eae8e4;
-        position: relative;
+        position: fixed;
+        width: 100%;
+        top: 9rem;
         background-color: white;
         z-index: 20;
         position: absolute;
