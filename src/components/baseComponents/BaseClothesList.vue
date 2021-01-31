@@ -1,11 +1,11 @@
 <template>
-  <div id="lv-clothes">
-    <!-- responsive grid system for the clothes -->
+  <div id="lv-clothes-list">
+    
   </div>
 </template>
 <script>
 export default {
-  name: 'Clothes'
+  name: 'ClothesList'
 }
 </script>
 <style lang="scss">

@@ -6,7 +6,7 @@ import router from './router/router'
 import store from './store/index'
 
 import {library} from '@fortawesome/fontawesome-svg-core'
-import {faTimes, faPhoneAlt, faMapMarkerAlt, faShoppingBag, faSearch} from '@fortawesome/free-solid-svg-icons'
+import {faTimes, faPhoneAlt, faMapMarkerAlt, faShoppingBag, faSearch, faSlidersH} from '@fortawesome/free-solid-svg-icons'
 import {faQuestionCircle, faHeart, faUser} from '@fortawesome/free-regular-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 
@@ -21,6 +21,7 @@ library.add(
   faUser,
   faShoppingBag,
   faSearch,
+  faSlidersH
 )
 
 Vue.directive('custom-scroll', {

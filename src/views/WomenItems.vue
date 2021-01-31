@@ -106,7 +106,7 @@
             padding-right: 1.5rem;
           }
         }
-
+        
         & a{
           display: inline-block;
           padding: 2rem 0;  
