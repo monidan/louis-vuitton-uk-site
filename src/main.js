@@ -1,12 +1,16 @@
 import Vue from 'vue'
+
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import router from './router/router'
 import store from './store/index'
+
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {faTimes, faPhoneAlt, faMapMarkerAlt, faShoppingBag, faSearch} from '@fortawesome/free-solid-svg-icons'
 import {faQuestionCircle, faHeart, faUser} from '@fortawesome/free-regular-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
+
+import '@/styles/main.scss'
 
 library.add(
   faTimes,

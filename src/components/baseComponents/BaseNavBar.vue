@@ -4,9 +4,9 @@
             <ul>
                 <li v-for="item in navItems"
                     :key="item.name">
-                    <a :href="item.link">
+                    <router-link :to="item.link">
                         {{ item.name }}
-                    </a>
+                    </router-link>
                 </li>
             </ul>
         </nav>

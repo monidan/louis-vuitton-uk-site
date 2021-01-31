@@ -1,9 +1,7 @@
 <template>
     <div id="app">
       <Header country='Украина'/>
-      <router-view
-        id="lv-view"
-      ></router-view>
+        <router-view class="lv-view"></router-view>
       <Footer country="Украина"/>
     </div>
 </template>
@@ -18,38 +16,12 @@ export default {
     Header,
     Footer
   },
+  mounted() {
+    const {height} = window.getComputedStyle(this.$el.querySelector('.header__inner'), null);
+    
+
+    const header = this.$el.firstElementChild;
+    header.style.height = height;
+  }
 }
 </script>
-
-<style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
-
-  html{
-    min-height: 100%;
-  }
-
-  body{
-    margin: 0;
-    padding: 0;
-
-    font-family: 'Raleway', sans-serif;
-    letter-spacing: .05rem;
-  }
-  a{
-    text-decoration: none;
-    color: black;
-  }
-  ul{
-    display: flex;
-    padding: 0;
-    margin: 0;
-    
-    li{
-      list-style-type: none;
-    }
-  }
-
-  #lv-view{
-    padding-top: 9rem;
-  }
-</style>

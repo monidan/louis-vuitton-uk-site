@@ -1,11 +1,14 @@
 <template>
-    <header id="header" v-custom-scroll>
-        <HeaderDelivery />
+    <header id="header">
+        <div class="header__inner" v-custom-scroll>
+            <HeaderDelivery />
             <HeaderSubMenu 
                 :country='country'/>
             <section class="header__navigation">
                 <page-wrapper>
-                    <img src="../assets/logo.svg" alt="Louis Vuitton" class="header__logo">
+                    <router-link to='/'>
+                        <img src="../assets/logo.svg" alt="Louis Vuitton" class="header__logo">
+                    </router-link>
                     <BaseNavBar 
                         class='header__nav_bar'
                         :navItems="itemsList"/>
@@ -31,6 +34,7 @@
                      class="clothes-menu-mask"
                      @click="closeClothesMenu"></div>
             </transition>
+        </div>
     </header>
 </template>
 
@@ -55,7 +59,7 @@ export default {
         return {
             itemsList: [
                     {name: "Новинки", link: "#"},
-                    {name: "Для женщин", link: "#"},
+                    {name: "Для женщин", link: "/women/clothes"},
                     {name: "Для мужчин", link: "#"},
                     {name: "Стиль жизни и путешествий", link: "#"},
                     {name: "Журнал", link: "#"}
@@ -79,7 +83,6 @@ export default {
             body.style.overflow = 'auto'
             body.style.position = null;
             body.style.width = null;
-            // body.style.top = null
 
             const html = document.documentElement;
             html.style.overflow = 'auto';
@@ -94,24 +97,28 @@ export default {
             const html = document.documentElement;
             html.style.overflow = 'hidden';
         }
-    }
+    },
 }
 </script>
 
 <style lang="scss">
     #header{
-        position: fixed!important;
-        width: 100%;
-        top: 0;
+        position: realtive;
+    }
 
+    .header__inner{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
         transition: transform .3s ease-in-out;
 
-        background-color: white;
     }
 
     .header_hide{
         transform: translateY(-100%);
     }
+
 
 
     .header__navigation{
